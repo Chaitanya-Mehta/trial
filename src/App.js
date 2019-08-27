@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import * as datal from './example.json';
+import datal from './example.json';
 //import { stat } from 'fs';
 
 class App extends Component {
@@ -19,7 +19,7 @@ class App extends Component {
       <h1>
         {
           this.state.data.map(function(people){
-             return (<div>{people.A}</div>);
+             return (<div key={people.C}>{people.A}</div>);
           })
         }
       </h1>

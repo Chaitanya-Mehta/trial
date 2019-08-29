@@ -3,6 +3,11 @@ import React,{Component} from 'react';
 import './App.css';
 import datal from './example.json';
 //import { stat } from 'fs';
+import Kard from './Pages/Kard'
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+
+
 
 class App extends Component {
   constructor(){
@@ -16,13 +21,16 @@ class App extends Component {
   
   render(){return (
     <div>
-      <h1>
+      <GridList cols={4}>
         {
-          this.state.data.map(function(people){
-             return (<div key={people.C}>{people.A}</div>);
+          this.state.data.map(function(people,index){
+             return (
+              <GridListTile key={people.C} cols={index%3}>
+              <Kard key={people.C} dis={people.B} />
+          </GridListTile>);
           })
         }
-      </h1>
+        </GridList>
     </div>
   );
 }}

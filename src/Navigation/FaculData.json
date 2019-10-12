@@ -1,0 +1,14 @@
+[
+    {
+        "A":"MessageFromDirector",
+        "B":"/Faculty1"
+    },
+    {
+        "A":"MessageFromDOAA",
+        "B":"/Faculty2"
+    },
+    {
+        "A":"MessageFromAlumniCoOrd",
+        "B":"/Faculty3"
+    }
+]
